@@ -1,23 +1,52 @@
-import logo from './logo.svg';
+import CrissCross from './engine/CrissCross';
+import Game from './components/Game';
 import './App.css';
-
+const data = {
+  width: 300,
+  height: 300,
+  random: false,
+  dataMatrix: [[
+        "one",
+        "one",
+        "one",
+        "one",
+        "one"
+    ],
+    [
+        "two",
+        "two",
+        "two",
+        "two",
+        "two"
+    ],
+    [
+        "three",
+        "three",
+        "three",
+        "three",
+        "three"
+    ],
+    [
+        "four",
+        "four",
+        "four",
+        "four",
+        "four"
+    ],
+    [
+        "five",
+        "five",
+        "five",
+        "five",
+        "five"
+    ]],
+  swapping: false,
+};
 function App() {
+  const cc = new CrissCross(data);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Game game={cc} />
     </div>
   );
 }

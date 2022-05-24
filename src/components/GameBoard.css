@@ -1,0 +1,22 @@
+.game-board{
+    position: relative;
+    touch-action: none;
+    width: 300px;
+    height: 300px;
+    margin: 40px auto 0;
+}
+.game-board > .game-piece{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 0 0 1px #000000;
+}
+.game-board > .board-blocker{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    background-color: rgba(0,0,0,.4);
+}
